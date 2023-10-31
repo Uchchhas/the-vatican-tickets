@@ -1,0 +1,290 @@
+$spaceAmounts: (0, 5, 7, 10, 12, 14, 15, 18, 20, 24, 25, 26, 30, 32, 35, 40, 45, 50, 55, 60, 70, 75, 80, 100);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceAmounts {
+  .m-all-#{$space} {
+    margin: #{$space}px !important;
+  }
+
+  .m-x-#{$space} {
+    margin-left: #{$space}px !important;
+    margin-right: #{$space}px !important;
+  }
+
+  .p-all-#{$space} {
+    padding: #{$space}px !important;
+  }
+
+  .p-x-#{$space} {
+    padding-left: #{$space}px !important;
+    padding-right: #{$space}px !important;
+  }
+
+  .p-y-#{$space} {
+    padding-top: #{$space}px !important;
+    padding-bottom: #{$space}px !important;
+  }
+
+  .m-y-#{$space} {
+    margin-top: #{$space}px !important;
+    margin-bottom: #{$space}px !important;
+  }
+
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+@each $space in $spaceAmounts {
+  @media #{$device-sm-min} {
+    .m-all-sm-#{$space} {
+      margin: #{$space}px !important;
+    }
+
+    .m-x-sm-#{$space} {
+      margin-left: #{$space}px !important;
+      margin-right: #{$space}px !important;
+    }
+
+    .p-all-sm-#{$space} {
+      padding: #{$space}px !important;
+    }
+
+    .p-x-sm-#{$space} {
+      padding-left: #{$space}px !important;
+      padding-right: #{$space}px !important;
+    }
+
+    .p-y-sm-#{$space} {
+      padding-top: #{$space}px !important;
+      padding-bottom: #{$space}px !important;
+    }
+
+    .m-y-sm-#{$space} {
+      margin-top: #{$space}px !important;
+      margin-bottom: #{$space}px !important;
+    }
+
+    @each $side in $sides {
+      .m-#{str-slice($side, 0, 1)}-sm-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p-#{str-slice($side, 0, 1)}-sm-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+
+  @media #{$device-md-min} {
+    .m-all-md-#{$space} {
+      margin: #{$space}px !important;
+    }
+
+    .m-x-md-#{$space} {
+      margin-left: #{$space}px !important;
+      margin-right: #{$space}px !important;
+    }
+
+    .p-all-md-#{$space} {
+      padding: #{$space}px !important;
+    }
+
+    .p-x-md-#{$space} {
+      padding-left: #{$space}px !important;
+      padding-right: #{$space}px !important;
+    }
+
+    .p-y-md-#{$space} {
+      padding-top: #{$space}px !important;
+      padding-bottom: #{$space}px !important;
+    }
+
+    .m-y-md-#{$space} {
+      margin-top: #{$space}px !important;
+      margin-bottom: #{$space}px !important;
+    }
+
+    @each $side in $sides {
+      .m-#{str-slice($side, 0, 1)}-md-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p-#{str-slice($side, 0, 1)}-md-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+
+  @media #{$device-lg-min} {
+    .m-all-lg-#{$space} {
+      margin: #{$space}px !important;
+    }
+
+    .m-x-lg-#{$space} {
+      margin-left: #{$space}px !important;
+      margin-right: #{$space}px !important;
+    }
+
+    .p-all-lg-#{$space} {
+      padding: #{$space}px !important;
+    }
+
+    .p-x-lg-#{$space} {
+      padding-left: #{$space}px !important;
+      padding-right: #{$space}px !important;
+    }
+
+    .p-y-lg-#{$space} {
+      padding-top: #{$space}px !important;
+      padding-bottom: #{$space}px !important;
+    }
+
+    .m-y-lg-#{$space} {
+      margin-top: #{$space}px !important;
+      margin-bottom: #{$space}px !important;
+    }
+
+    @each $side in $sides {
+      .m-#{str-slice($side, 0, 1)}-lg-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p-#{str-slice($side, 0, 1)}-lg-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+
+  @media #{$device-xl-min} {
+    .m-all-xl-#{$space} {
+      margin: #{$space}px !important;
+    }
+
+    .m-x-xl-#{$space} {
+      margin-left: #{$space}px !important;
+      margin-right: #{$space}px !important;
+    }
+
+    .p-all-xl-#{$space} {
+      padding: #{$space}px !important;
+    }
+
+    .p-x-xl-#{$space} {
+      padding-left: #{$space}px !important;
+      padding-right: #{$space}px !important;
+    }
+
+    .p-y-xl-#{$space} {
+      padding-top: #{$space}px !important;
+      padding-bottom: #{$space}px !important;
+    }
+
+    .m-y-xl-#{$space} {
+      margin-top: #{$space}px !important;
+      margin-bottom: #{$space}px !important;
+    }
+
+    @each $side in $sides {
+      .m-#{str-slice($side, 0, 1)}-xl-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p-#{str-slice($side, 0, 1)}-xl-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+
+  @media #{$device-xxl-min} {
+    .m-all-xxl-#{$space} {
+      margin: #{$space}px !important;
+    }
+
+    .m-x-xxl-#{$space} {
+      margin-left: #{$space}px !important;
+      margin-right: #{$space}px !important;
+    }
+
+    .p-all-xxl-#{$space} {
+      padding: #{$space}px !important;
+    }
+
+    .p-x-xxl-#{$space} {
+      padding-left: #{$space}px !important;
+      padding-right: #{$space}px !important;
+    }
+
+    .p-y-xxl-#{$space} {
+      padding-top: #{$space}px !important;
+      padding-bottom: #{$space}px !important;
+    }
+
+    .m-y-xxl-#{$space} {
+      margin-top: #{$space}px !important;
+      margin-bottom: #{$space}px !important;
+    }
+
+    @each $side in $sides {
+      .m-#{str-slice($side, 0, 1)}-xxl-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p-#{str-slice($side, 0, 1)}-xxl-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+}
+
+.gx-112 {
+  @media #{$device-xl-min} {
+    --bs-gutter-x: 112px;
+  }
+}
+
+.gx-90 {
+  --bs-gutter-x: 90px;
+}
+
+.gx-80 {
+  --bs-gutter-x: 80px;
+}
+
+.gx-75 {
+  --bs-gutter-x: 75px;
+}
+
+.gx-70 {
+  --bs-gutter-x: 70px;
+}
+
+.gx-60 {
+  --bs-gutter-x: 60px;
+}
+
+.gx-50 {
+  --bs-gutter-x: 50px;
+}
+
+.gx-40 {
+  --bs-gutter-x: 40px;
+}
+
+.gx-30 {
+  --bs-gutter-x: 30px;
+}
+
+.gx-20 {
+  --bs-gutter-x: 20px;
+}
+
+.gx-15 {
+  --bs-gutter-x: 15px;
+}

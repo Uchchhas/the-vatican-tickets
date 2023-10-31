@@ -1,0 +1,166 @@
+// Override Bootstrap Variables
+$white                    :  #fff;
+$black                    :  #000;
+
+$primary                  :  rgb(128, 0, 255);
+$primaryLight             :  #7ebac0;
+$primaryLighter           :  rgb(248, 246, 255);
+$secondary                :  rgb(229, 0, 110);
+$secondaryDark            :  #311b41;
+
+$orange                   :  #f87010;
+$blueLight                :  #d5E3fa;
+$yellow                   :  #ffc217;
+$yellowLight              :  #fff2cc;
+
+$info                     :  #1890ff;
+$success                  :  #006f37;
+$successLighter           :  #cce2d7;
+$warning                  :  #ffa200;
+$warningDark              :  #ffaf40;
+$danger                   :  #ff4842;
+$error                    :  #ff3333;
+$dark                     :  #292929;
+$darkMid                  :  #343434;
+$darkLight                :  #595959;
+
+$gray-100                 :  #f9fafb;
+$gray-200                 :  #f4f6f8;
+$gray-300                 :  #dfe3e8;
+$gray-400                 :  #c4cdd5;
+$gray-500                 :  #919eab;
+$gray-600                 :  #637381;
+$gray-700                 :  #454f5b;
+$gray-800                 :  #212b36;
+$gray-900                 :  #161c24;
+
+$border-color             :  #ebebeb;
+$border-color-light       :  #e3e3e3;
+$border-color-dark        :  #595959;
+$border-color-secondary   :  #a4a4a5;
+$border-color-ternary     :  #f0f0f0;
+$border-color-regular     :  #d7d7d7;
+$border-color-input       :  #eee;
+
+// Override Bootstrap Theme Colors
+$theme-colors: (
+        'primary'         : $primary,
+        'primary-light'   : $primaryLight,
+        'primary-lighter' : $primaryLighter,
+        'secondary'       : $secondary,
+        'secondary-dark'  : $secondary,
+        'info'            : $info,
+        'success'         : $success,
+        'success-lighter' : $successLighter,
+        'warning'         : $warning,
+        'warning-dark'    : $warningDark,
+        'danger'          : $danger,
+        'error'           : $error,
+        'orange'          : $orange,
+        'yellow'          : $yellow,
+        'dark'            : $dark,
+        'dark-mid'        : $darkMid,
+        'dark-light'      : $darkLight,
+        'gray-100'        : $gray-100,
+        'gray-200'        : $gray-200,
+        'gray-300'        : $gray-300,
+        'gray-400'        : $gray-400,
+        'gray-500'        : $gray-500,
+        'gray-600'        : $gray-600,
+        'gray-700'        : $gray-700,
+        'gray-800'        : $gray-800,
+        'gray-900'        : $gray-900
+);
+
+$grays: (
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1254px
+);
+
+// Font Awesome Path
+$fa-font-path: "../vendors/fontawesome/webfonts";
+
+// Layouts Variation
+$device-xxs-max: '(max-width: 400px)';
+$device-xs-min: '(min-width: 401px)';
+$device-xs-max: '(max-width: 575px)';
+$device-sm-min: '(min-width: 576px)';
+$device-sm-max: '(max-width: 767px)';
+$device-md-min: '(min-width: 768px)';
+$device-md-max: '(max-width: 991px)';
+$device-lg-min: '(min-width: 992px)';
+$device-lg-max: '(max-width: 1199px)';
+$device-xl-min: '(min-width: 1200px)';
+$device-xl-max: '(max-width: 1399px)';
+$device-xxl-min: '(min-width: 1400px)';
+
+$header-topbar-height: 80px;
+$header-main-height: 50px;
+
+$sidebar-width: 418px;
+$sidebar-width-tab: 350px;
+$sidebar-gap: 50px;
+$sidebar-gap-tab: 20px;
+
+$banner-height: 670px;
+$banner-medium: 550px;
+$banner-small: 400px;
+$banner-small-mobile-height: 300px;
+$banner-breadcrumb-height: 225px;
+
+:root {
+    --color-white: #{$white};
+    --color-black: #{$black};
+    --color-primary: #{$primary};
+    --color-primary-light: #{$primaryLight};
+    --color-primary-lighter: #{$primaryLighter};
+    --color-secondary: #{$secondary};
+    --color-secondary-dark: #{$secondaryDark};
+    --color-info: #{$info};
+    --color-success: #{$success};
+    --color-warning: #{$warning};
+    --color-warning-dark: #{$warningDark};
+    --color-danger: #{$danger};
+    --color-error: #{$error};
+    --color-blue-light: #{$blueLight};
+    --color-orange: #{$orange};
+
+    --color-dark: #{$dark};
+    --color-dark-mid: #{$darkMid};
+    --color-dark-light: #{$darkLight};
+
+    --gray-100: #{$gray-100};
+    --gray-200: #{$gray-200};
+    --gray-300: #{$gray-300};
+    --gray-400: #{$gray-400};
+    --gray-500: #{$gray-500};
+    --gray-600: #{$gray-600};
+    --gray-700: #{$gray-700};
+    --gray-800: #{$gray-800};
+    --gray-900: #{$gray-900};
+
+    --color-border: #{$border-color};
+    --color-border-light: #{$border-color-light};
+    --color-border-dark: #{$border-color-dark};
+    --color-border-secondary: #{$border-color-secondary};
+    --color-border-ternary: #{$border-color-ternary};
+    --color-border-regular: #{$border-color-regular};
+    --color-border-input: #{$border-color-input};
+
+    --transition: all 0.25s ease-in-out;
+}

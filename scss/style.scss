@@ -1,0 +1,18 @@
+@import "variables";
+
+@import "../vendors/bootstrap/scss/bootstrap";
+
+// Fontawesome
+@import "../vendors/fontawesome/scss/fontawesome";
+@import "../vendors/fontawesome/scss/light";
+@import "../vendors/fontawesome/scss/thin";
+@import "../vendors/fontawesome/scss/regular";
+@import "../vendors/fontawesome/scss/solid";
+
+@import "fonts";
+@import "animation";
+@import "mixins";
+
+// Layouts
+@import "layouts/wrapper";
+@import "layouts/header";

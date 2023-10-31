@@ -1,0 +1,13 @@
+@mixin unstyled-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+@mixin hover-bg-primary-lighter {
+    transition: var(--transition);
+
+    &:hover {
+        background-color: $primaryLighter;
+    }
+}
