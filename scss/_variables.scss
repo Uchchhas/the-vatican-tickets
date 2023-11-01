@@ -34,7 +34,7 @@ $gray-700                 :  #454f5b;
 $gray-800                 :  #212b36;
 $gray-900                 :  #161c24;
 
-$border-color             :  #ebebeb;
+$border-color             :  rgb(217, 217, 217);
 $border-color-light       :  #e3e3e3;
 $border-color-dark        :  #595959;
 $border-color-secondary   :  #a4a4a5;
@@ -110,6 +110,7 @@ $device-xl-max: '(max-width: 1399px)';
 $device-xxl-min: '(min-width: 1400px)';
 
 $header-topbar-height: 80px;
+$header-topbar-height-mobile: 56px;
 $header-main-height: 50px;
 
 $sidebar-width: 418px;

@@ -1,5 +1,7 @@
 @import "variables";
+@import "mixins";
 
+// Bootstrap
 @import "../vendors/bootstrap/scss/bootstrap";
 
 // Fontawesome
@@ -8,11 +10,18 @@
 @import "../vendors/fontawesome/scss/thin";
 @import "../vendors/fontawesome/scss/regular";
 @import "../vendors/fontawesome/scss/solid";
+@import "../vendors/fontawesome/scss/brands";
 
 @import "fonts";
+@import "forms";
 @import "animation";
-@import "mixins";
+@import "spacing";
+@import "widgets";
 
 // Layouts
 @import "layouts/wrapper";
 @import "layouts/header";
+@import "layouts/footer";
+
+// Pages
+@import "pages/home";

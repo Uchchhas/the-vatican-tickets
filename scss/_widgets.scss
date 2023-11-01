@@ -1,0 +1,11 @@
+/* -- Rating Star Widget -- */
+.ratings-wrapper {
+    display: inline-flex;
+    align-items: center;
+    color: rgb(102, 102, 102);
+
+    .rating-star {
+        margin-right: 5px;
+        font-size: 17px;
+    }
+}
