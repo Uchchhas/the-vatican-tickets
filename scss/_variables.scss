@@ -111,7 +111,7 @@ $device-xxl-min: '(min-width: 1400px)';
 
 $header-topbar-height: 80px;
 $header-topbar-height-mobile: 56px;
-$header-main-height: 50px;
+$header-main-height: 40px;
 
 $sidebar-width: 418px;
 $sidebar-width-tab: 350px;
@@ -123,6 +123,8 @@ $banner-medium: 550px;
 $banner-small: 400px;
 $banner-small-mobile-height: 300px;
 $banner-breadcrumb-height: 225px;
+
+$border-radius-lg: 1rem;
 
 :root {
     --color-white: #{$white};

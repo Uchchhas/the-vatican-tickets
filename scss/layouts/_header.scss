@@ -47,10 +47,11 @@ header {
 
     .language-meta {
         .nice-select {
-            height: 37px;
-            line-height: 35px;
+            height: 30px;
+            font-size: 13px;
+            line-height: 27px;
             padding-left: 10px;
-            padding-right: 30px;
+            padding-right: 35px;
 
             span {
                 &.current {
@@ -62,7 +63,7 @@ header {
                         content: "";
                         font-weight: 400;
                         @include font-awesome-font-mixin;
-                        margin-right: 5px;
+                        margin-right: 6px;
                     }
 
                     ~ .list {
@@ -76,7 +77,7 @@ header {
 
         @media (min-width: 768px) {
             &.fixed-top {
-                top: 6px;
+                top: 5px;
                 left: auto;
                 right: 24.4px;
                 animation-name: fadeInLeft;
@@ -123,42 +124,52 @@ header {
 
             li {
                 a {
-                    padding: 12px 15px;
+                    padding: 8px 15px;
+                }
+
+                @media (min-width: 768px) {
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
                 }
             }
 
             a {
                 position: relative;
                 color: rgb(102, 102, 102);
-                font-size: 15px;
+                font-size: 14px;
                 line-height: 20px;
                 text-decoration: none;
                 transition: var(--transition);
 
-                &:hover {
-                    color: $primary;
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    left: 0;
+                    bottom: -4px;
+                    border-radius: 2px 2px 0 0;
+                    background-color: $primary;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: var(--transition);
+
+                    @media (min-width: 768px) {
+
+                    }
+
+                    @media (max-width: 767px) {
+
+                    }
                 }
 
-                &.active {
+                &.active, &:hover {
                     color: $primary;
 
                     &:before {
-                        content: '';
-                        width: 100%;
-                        height: 3px;
-                        position: absolute;
-                        left: 0;
-                        bottom: -4px;
-                        border-radius: 2px 2px 0 0;
-                        background-color: $primary;
-
-                        @media (min-width: 768px) {
-
-                        }
-
-                        @media (max-width: 767px) {
-
-                        }
+                        opacity: 1;
+                        visibility: visible;
                     }
                 }
             }

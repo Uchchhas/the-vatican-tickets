@@ -1,6 +1,8 @@
 body {
-    --bs-body-font-family: "Halyard Display";
+    --bs-body-font-family: 'Inter', sans-serif;
     --bs-body-font-size: 15px;
+    --bs-body-font-weight: 500;
+    --bs-body-color: var(--color-dark-mid);
 
     @media (max-width: 767px) {
         padding-top: $header-topbar-height-mobile;

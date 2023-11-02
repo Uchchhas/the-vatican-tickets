@@ -5,8 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Tickets - Priority Entry to Museums & Sistine Chapel</title>
 
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
         <!-- Styles -->
         <link rel="stylesheet" href="vendors/jquery-nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
         <link rel="stylesheet" href="css/style.min.css">
     </head>
     <body>
@@ -84,9 +90,235 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="intro-image-wrapper">
-                                    <img src="https://cdn-imgix.headout.com/mircobrands-banner/image/9c1183cfc6fce70ba91fee1d7380c890-Vatican%20Museums.jpg?auto=format&w=705.6&h=360&q=90&crop=faces"
+                                    <img src="https://images.unsplash.com/photo-1575223970966-76ae61ee7838?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                          class="img-fluid rounded"
                                          alt="Home intro image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-gap-bottom section-home-services">
+                    <div class="container">
+                        <div class="service-card">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="row gx-15">
+                                        <div class="col-md-4">
+                                            <div class="service-image-slider slider-style-1">
+                                                <div class="swiper">
+                                                    <!-- Additional required wrapper -->
+                                                    <div class="swiper-wrapper">
+                                                        <!-- Slides -->
+                                                        <div class="swiper-slide"
+                                                             style="background-image: url(https://images.unsplash.com/photo-1593548615306-d1db319843b6?auto=format&fit=crop&q=80&w=1888&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                                                        </div>
+                                                        <div class="swiper-slide"
+                                                             style="background-image: url(https://images.unsplash.com/photo-1513038630932-13873b1a7f29?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzZXVtfGVufDB8MXwwfHx8MA%3D%3D)">
+                                                        </div>
+                                                        <div class="swiper-slide"
+                                                             style="background-image: url(https://images.unsplash.com/photo-1534235826754-0a3572d1d6d5?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVzZXVtfGVufDB8MXwwfHx8MA%3D%3D)">
+                                                        </div>
+                                                        <div class="swiper-slide"
+                                                             style="background-image: url(https://plus.unsplash.com/premium_photo-1661896580759-c9c8f1a4862a?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bXVzZXVtfGVufDB8MXwwfHx8MA%3D%3D)">
+                                                        </div>
+                                                    </div>
+                                                    <!-- If we need pagination -->
+                                                    <div class="swiper-pagination"></div>
+
+                                                    <!-- If we need navigation buttons -->
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-button-next"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="service-details">
+                                                <h5 class="service-title">Guided Tour of Vatican Museums & Sistine Chapel</h5>
+                                                <div class="service-details-tab">
+                                                    <ul class="nav nav-tabs" id="serviceDetailsTab1" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link active"
+                                                                    id="highlights-tab-1"
+                                                                    data-bs-toggle="tab"
+                                                                    data-bs-target="#highlights-tab-pane-1"
+                                                                    type="button"
+                                                                    role="tab"
+                                                                    aria-controls="highlights-tab-pane-1"
+                                                                    aria-selected="true">
+                                                                Highlights
+                                                            </button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link"
+                                                                    id="inclusions-tab-1"
+                                                                    data-bs-toggle="tab"
+                                                                    data-bs-target="#inclusions-tab-pane-1"
+                                                                    type="button"
+                                                                    role="tab"
+                                                                    aria-controls="inclusions-tab-pane-1"
+                                                                    aria-selected="false">
+                                                                Inclusions
+                                                            </button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link"
+                                                                    id="need-to-know-tab-1"
+                                                                    data-bs-toggle="tab"
+                                                                    data-bs-target="#need-to-know-tab-pane-1"
+                                                                    type="button"
+                                                                    role="tab"
+                                                                    aria-controls="need-to-know-tab-pane-1"
+                                                                    aria-selected="false">
+                                                                Need to Know
+                                                            </button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link"
+                                                                    id="cancellation-policy-tab-1"
+                                                                    data-bs-toggle="tab"
+                                                                    data-bs-target="#cancellation-policy-tab-pane-1"
+                                                                    type="button"
+                                                                    role="tab"
+                                                                    aria-controls="cancellation-policy-tab-pane-1"
+                                                                    aria-selected="false">
+                                                                Cancellation Policy
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="serviceDetailsTabContent1">
+                                                        <div class="tab-pane fade show active"
+                                                             id="highlights-tab-pane-1"
+                                                             role="tabpanel"
+                                                             aria-labelledby="highlights-tab-1"
+                                                             tabindex="0">
+                                                            <ul>
+                                                                <li>
+                                                                    Make the most out of your visit and jump straight
+                                                                    into the action. Skip the line with this guided
+                                                                    tour, bypassing long queues at the Vatican Museums.
+                                                                </li>
+                                                                <li>
+                                                                    Are you ready for the experience of a lifetime? The
+                                                                    expert guides reveal the fascinating stories and
+                                                                    hidden symbolism behind the artworks, adding a whole
+                                                                    new dimension to your experience.
+                                                                </li>
+                                                                <li>
+                                                                    With unforgettable masterpieces and exquisite art,
+                                                                    explore a vast collection spanning centuries, from
+                                                                    ancient artifacts to Renaissance marvels.
+                                                                </li>
+                                                                <li>
+                                                                    Discover Michelangelo's awe-inspiring Sistine Chapel
+                                                                    frescoes, including the iconic ceiling and Last
+                                                                    Judgment, showcasing the genius of Italy's most
+                                                                    renowned artist.
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="tab-pane fade"
+                                                             id="inclusions-tab-pane-1"
+                                                             role="tabpanel"
+                                                             aria-labelledby="inclusions-tab-1"
+                                                             tabindex="0">
+                                                            <h6>Inclusions</h6>
+                                                            <ul>
+                                                                <li>
+                                                                    Skip-the-line entrance to the Vatican Museums
+                                                                </li>
+                                                                <li>
+                                                                    Entrance to the Sistine Chapel
+                                                                </li>
+                                                                <li>
+                                                                    Expert & charismatic local guide
+                                                                </li>
+                                                                <li>
+                                                                    Audio equipment to hear the guide clearly (making
+                                                                    sure you don't miss a beat)
+                                                                </li>
+                                                                <li>
+                                                                    Group size of 25 or less
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="tab-pane fade"
+                                                             id="need-to-know-tab-pane-1"
+                                                             role="tabpanel"
+                                                             aria-labelledby="need-to-know-tab-1"
+                                                             tabindex="0">
+                                                            <ul>
+                                                                <li>
+                                                                    Tip: Arrive early in the morning or later in the
+                                                                    afternoon to avoid the crowds.
+                                                                </li>
+                                                                <li>
+                                                                    The Vatican Museums offer free tickets for visitors
+                                                                    with mobility impairments (with certified invalidity
+                                                                    exceeding 74%). In the case of visitors lacking in
+                                                                    self-sufficiency, free entry is extended to their
+                                                                    companions.
+                                                                </li>
+                                                                <li>
+                                                                    Please note: All guests must pass through
+                                                                    airport-style security. During high season and peak
+                                                                    hours, the wait time at the security check may be up
+                                                                    to 30 mins.
+                                                                </li>
+                                                                <li>
+                                                                    Compulsory Vatican dress code: Visitors must wear
+                                                                    clothing that covers their knees, arms, and back.
+                                                                </li>
+                                                                <li>
+                                                                    The experience is not accessible for wheelchair
+                                                                    users, pram/stroller users, or baby carriages.
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="tab-pane fade"
+                                                             id="cancellation-policy-tab-pane-1"
+                                                             role="tabpanel"
+                                                             aria-labelledby="cancellation-policy-tab-1"
+                                                             tabindex="0">
+                                                            <ul>
+                                                                <li>
+                                                                    These tickets can't be cancelled or rescheduled.
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="service-caption">
+                                        <div>
+                                            <div class="price">
+                                                <div class="label text-gray-600 small">Starts from</div>
+                                                <div class="amount fs-3 fw-bold">€48</div>
+                                            </div>
+                                            <ul class="feature-list">
+                                                <li>
+                                                    <i class="fa-regular fa-bolt"></i> Instant Confirmation
+                                                </li>
+                                                <li>
+                                                    <i class="fa-regular fa-mobile"></i> Mobile Ticket
+                                                </li>
+                                                <li>
+                                                    <i class="fa-regular fa-timer"></i> Flexible Duration
+                                                </li>
+                                                <li>
+                                                    <i class="fa-regular fa-flag-pennant"></i> Guided Tour
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a href="#" class="w-100 btn btn-primary btn-availability-check">
+                                            Check Availability <i class="fa-regular fa-arrow-right ms-2"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -209,6 +441,7 @@
         <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="vendors/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="vendors/swiper/swiper-bundle.min.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

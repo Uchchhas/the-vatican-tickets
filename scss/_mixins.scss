@@ -22,3 +22,56 @@
     line-height: 1;
     text-rendering: auto;
 }
+
+@mixin swiper-slider-arrow-mixin-1 {
+    width: 30px;
+    height: 30px;
+    color: var(--color-dark-mid);
+    border-radius: 50%;
+    background-color: var(--color-white);
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.2));
+    transition: var(--transition);
+
+    &:after {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    &:hover {
+        color: var(--color-primary);
+        background-color: var(--color-primary-lighter);
+    }
+}
+
+@mixin default-tab-mixin {
+    .nav-tabs {
+        margin-bottom: 15px;
+
+        .nav-link {
+            position: relative;
+            color: var(--color-dark-mid);
+            border: none;
+
+            &:after {
+                content: '';
+                width: 0;
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-radius: 2px 2px 0 0;
+                background-color: var(--color-primary);
+                transition: var(--transition);
+            }
+
+            &.active {
+                color: var(--color-primary);
+                background-color: transparent;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
