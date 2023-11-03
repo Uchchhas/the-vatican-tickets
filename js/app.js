@@ -1,16 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const html = document.querySelector('html');
-    const body = document.querySelector('body');
-    const navbarTopSection = document.querySelector('.navbar-top-section');
-    const navbarMainSection = document.querySelector('.navbar-main-section');
-    const navbarMain = document.querySelector('.navbar-main-section .navbar-main');
-    const offset = navbarMainSection.offsetTop;
-    const languageMeta = document.querySelector('.language-meta');
-    const navbarMainSectionContainer = document.querySelector('.navbar-main-section > .container');
-    const navbarMainSectionContainerRightPosition = navbarMainSectionContainer?.getBoundingClientRect().right;
-    const windowViewportWidth = window.innerWidth;
-    const gap = windowViewportWidth - navbarMainSectionContainerRightPosition;
-    const mobileMenuToggleButton = document.querySelector('.btn-mobile-menu-toggle');
+    const html = document.querySelector('html'),
+        body = document.querySelector('body'),
+        navbarTopSection = document.querySelector('.navbar-top-section'),
+        navbarMainSection = document.querySelector('.navbar-main-section'),
+        navbarMain = document.querySelector('.navbar-main-section .navbar-main'),
+        offset = navbarMainSection.offsetTop,
+        languageMeta = document.querySelector('.language-meta'),
+        navbarMainSectionContainer = document.querySelector('.navbar-main-section > .container'),
+        navbarMainSectionContainerRightPosition = navbarMainSectionContainer?.getBoundingClientRect().right,
+        windowViewportWidth = window.innerWidth,
+        gap = windowViewportWidth - navbarMainSectionContainerRightPosition,
+        mobileMenuToggleButton = document.querySelector('.btn-mobile-menu-toggle'),
+        serviceCardDetailsElements = document.querySelectorAll('.service-card .service-details');
 
     let viewportWidth = '',
         viewportHeight = '';
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (viewportWidth >= 768) { // Scripts Run Only For Desktop
 
         /* -- Fixed Navbar on Scroll Only For Desktop -- */
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', () => {
             if (window.scrollY >= offset) {
                 navbarMainSection.classList.add('fixed-top');
                 languageMeta.classList.add('fixed-top');
@@ -41,6 +42,28 @@ document.addEventListener('DOMContentLoaded', function () {
                 navbarMainSection.classList.remove('fixed-top');
                 languageMeta.classList.remove('fixed-top');
             }
+        });
+
+        /* -- Add Show More/Less Content On Service Card Details -- */
+        const checkCollapsibleContentHeight = (tabId = null) => {
+            serviceCardDetailsElements.forEach(element => {
+                if (element.scrollHeight > element.clientHeight) {
+                    const activeTab = element.querySelector('.tab-pane.show.active');
+                    activeTab?.classList.add('collapsible');
+                    if (tabId) {
+                        const selectedTab = document.querySelector(tabId);
+                        selectedTab.classList.add('collapsible');
+                    }
+                }
+            });
+        }
+        checkCollapsibleContentHeight();
+
+        const tabElements = document.querySelectorAll('.service-details-tab button[data-bs-toggle="tab"]');
+        tabElements.forEach(tabEl => {
+            tabEl.addEventListener('shown.bs.tab', event => {
+                checkCollapsibleContentHeight(event.target.getAttribute('data-bs-target'));
+            });
         });
     } else { // Scripts Run Only For Mobile
 

@@ -38,7 +38,7 @@
     }
 
     &:hover {
-        color: var(--color-primary);
+        color: var(--color-secondary);
         background-color: var(--color-primary-lighter);
     }
 }
@@ -60,12 +60,12 @@
                 bottom: 0;
                 left: 0;
                 border-radius: 2px 2px 0 0;
-                background-color: var(--color-primary);
+                background-color: var(--color-secondary);
                 transition: var(--transition);
             }
 
             &.active {
-                color: var(--color-primary);
+                color: var(--color-secondary);
                 background-color: transparent;
 
                 &:after {
