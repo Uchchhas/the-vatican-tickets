@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
         windowViewportWidth = window.innerWidth,
         gap = windowViewportWidth - navbarMainSectionContainerRightPosition,
         mobileMenuToggleButton = document.querySelector('.btn-mobile-menu-toggle'),
-        serviceCardDetailsElements = document.querySelectorAll('.service-card .service-details');
+        serviceCardDetailsElements = document.querySelectorAll('.service-card .service-details'),
+        showMoreButtonElements = document.querySelectorAll('.service-card .more-details');
 
     let viewportWidth = '',
         viewportHeight = '';
@@ -45,26 +46,50 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         /* -- Add Show More/Less Content On Service Card Details -- */
-        const checkCollapsibleContentHeight = (tabId = null) => {
+        const checkForShowMoreContent = () => {
             serviceCardDetailsElements.forEach(element => {
-                if (element.scrollHeight > element.clientHeight) {
-                    const activeTab = element.querySelector('.tab-pane.show.active');
-                    activeTab?.classList.add('collapsible');
-                    if (tabId) {
-                        const selectedTab = document.querySelector(tabId);
-                        selectedTab.classList.add('collapsible');
+                const tabElements = element?.querySelectorAll('.service-details-tab button[data-bs-toggle="tab"]'),
+                    activeTab = element?.querySelector('.tab-pane.show.active');
+
+                const checkElementHeight = (tabId = null) => {
+                    if (element?.scrollHeight > element?.clientHeight) {
+                        activeTab?.classList.add('collapsible');
+
+                        if (tabId) {
+                            console.log(tabId)
+                            const selectedTab = document.querySelector(tabId);
+                            selectedTab.classList.add('collapsible');
+                        }
                     }
                 }
+                checkElementHeight();
+
+                tabElements.forEach(tabEl => {
+                    tabEl.addEventListener('shown.bs.tab', event => {
+                        checkElementHeight(event.target.getAttribute('data-bs-target'));
+                    });
+                });
             });
         }
-        checkCollapsibleContentHeight();
+        checkForShowMoreContent();
 
-        const tabElements = document.querySelectorAll('.service-details-tab button[data-bs-toggle="tab"]');
-        tabElements.forEach(tabEl => {
-            tabEl.addEventListener('shown.bs.tab', event => {
-                checkCollapsibleContentHeight(event.target.getAttribute('data-bs-target'));
+        /* -- Toggle Show More Content -- */
+        const showMoreDetails = () => {
+            showMoreButtonElements.forEach(button => {
+                button.addEventListener('click', () => {
+                    const parentElement = button?.closest('.service-details'),
+                        buttonTextElement = button.querySelector('.text');
+
+                    parentElement.classList.toggle('expanded');
+                    if (parentElement.classList.contains('expanded')) {
+                        buttonTextElement.innerText = `Show Less`;
+                    } else {
+                        buttonTextElement.innerText = `More Details`;
+                    }
+                });
             });
-        });
+        }
+        showMoreDetails();
     } else { // Scripts Run Only For Mobile
 
         window.addEventListener('scroll', function () {

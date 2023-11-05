@@ -28,6 +28,21 @@
             overflow: hidden;
             padding-right: 24px;
             border-right: 1px dashed var(--color-border);
+
+            &.expanded {
+                max-height: initial;
+
+                .service-details-tab {
+                    .more-details {
+                        position: static;
+                        background: transparent;
+
+                        i {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -65,12 +80,23 @@
 
     @media (min-width: 768px) {
         padding: 24px;
+
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
     }
 
-    @media (min-width: 768px) {
+    @media (max-width: 767px) {
         padding: 15px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
 }
+
+/* -- Service Compare Card -- */
+
 
 /* -- Service Image Slider -- */
 .service-image-slider {
