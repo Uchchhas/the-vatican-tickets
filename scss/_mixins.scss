@@ -66,7 +66,7 @@
 
             &.active {
                 color: var(--color-secondary);
-                background-color: transparent;
+                background-color: lighten($secondary, 53%);
 
                 &:after {
                     width: 100%;

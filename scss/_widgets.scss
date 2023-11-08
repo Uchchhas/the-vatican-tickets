@@ -95,9 +95,6 @@
     }
 }
 
-/* -- Service Compare Card -- */
-
-
 /* -- Service Image Slider -- */
 .service-image-slider {
     &.slider-style-1 {
@@ -145,17 +142,6 @@
     }
 
     .tab-pane {
-        ul {
-            padding-left: 15px;
-            margin: 0;
-
-            li {
-                &:not(:last-child) {
-                    margin-bottom: 7px;
-                }
-            }
-        }
-
         &.collapsible {
             .more-details {
                 @media (min-width: 768px) {

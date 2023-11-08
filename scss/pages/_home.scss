@@ -8,3 +8,93 @@
         width: 100%;
     }
 }
+
+.section-home-compare {
+    .compare-contents-wrapper {
+        @media (max-width: 767px) {
+            overflow-x: auto;
+        }
+    }
+
+    .compare-row {
+        @media (max-width: 767px) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    .compare-thumbnails-wrapper,
+    .compare-titles-wrapper,
+    .compare-prices-wrapper,
+    .compare-duration-wrapper,
+    .compare-inclusions-wrapper,
+    .cancellation-policy-wrapper {
+        @media (min-width: 768px) {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 767px) {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .prices-starting-wrapper {
+        @media (min-width: 768px) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    .book-buttons-wrapper {
+        .btn {
+            min-height: 45px;
+            font-weight: 500;
+            line-height: 31px;
+        }
+    }
+}
+
+.section-home-explore {
+    .explore-tab {
+        font-size: 14px;
+
+        @include default-tab-mixin;
+
+        .nav-link {
+            font-size: 14px;
+        }
+
+        .tab-pane {
+            border-radius: 0.375rem;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+    }
+}
+
+.section-home-plan {
+    .plan-tab {
+        font-size: 14px;
+
+        @include default-tab-mixin;
+
+        .nav-link {
+            font-size: 14px;
+        }
+
+        .tab-pane {
+            border-radius: 0.375rem;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+    }
+
+    .image-wrapper {
+        height: 300px;
+        border-radius: 0.375rem 0.375rem 0 0;
+        background-size: cover;
+        background-position: center;
+    }
+}

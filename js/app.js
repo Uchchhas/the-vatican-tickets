@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (window.scrollY >= offset) {
                 navbarMainSection.classList.add('fixed-top');
                 languageMeta.classList.add('fixed-top');
-                languageMeta.style.right = `${gap - 12}px`
+                languageMeta.style.right = `${gap - 6}px`
             } else {
                 navbarMainSection.classList.remove('fixed-top');
                 languageMeta.classList.remove('fixed-top');

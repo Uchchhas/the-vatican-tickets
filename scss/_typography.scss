@@ -1,0 +1,124 @@
+ul {
+    // Generate List Space
+    $listSpaces: (4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
+    @each $space in $listSpaces {
+        &.list-space-#{$space} {
+            > li {
+                margin-bottom: #{$space}px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &.list-indicator-play {
+        @include unstyled-list;
+
+        > li {
+            position: relative;
+            padding-left: 20px;
+
+            &:before {
+                content: '\f04b';
+                position: absolute;
+                top: 6px;
+                left: 0;
+                font-size: 10px;
+                @include font-awesome-font-mixin;
+                font-weight: 900;
+            }
+        }
+    }
+
+    &.list-indicator-check {
+        @include unstyled-list;
+
+        > li {
+            position: relative;
+            padding-left: 20px;
+
+            &:before {
+                content: '\f00c';
+                position: absolute;
+                top: 4px;
+                left: 0;
+                font-size: 12px;
+                @include font-awesome-font-mixin;
+                font-weight: 900;
+            }
+        }
+    }
+
+    &.list-space-6 {
+        > li {
+            margin-bottom: 6px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.list-space-10 {
+        > li {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.list-space-15 {
+        > li {
+            @media #{$device-lg-min} {
+                margin-bottom: 15px;
+            }
+
+            @media #{$device-md-max} {
+                margin-bottom: 10px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.indicator-color-primary {
+        > li {
+            &:before {
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    &.indicator-color-secondary {
+        > li {
+            &:before {
+                color: var(--color-secondary);
+            }
+        }
+    }
+
+    &.indicator-size-14 {
+        > li {
+            padding-left: 24px;
+
+            &:before {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
