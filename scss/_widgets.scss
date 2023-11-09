@@ -173,3 +173,13 @@
         }
     }
 }
+
+/* -- Note -- */
+.note {
+    padding: 20px;
+    border-radius: 0.375rem;
+
+    &.note-warning {
+        background-color: #fff1e0;
+    }
+}

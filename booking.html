@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tickets - Priority Entry to Museums & Sistine Chapel</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+              rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="vendors/jquery-nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="vendors/vanilla-calendar/vanilla-calendar.min.css">
+        <link rel="stylesheet" href="vendors/vanilla-calendar/themes/light.min.css">
+        <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/style.min.css">
+    </head>
+    <body>
+        <div class="body-content-wrapper">
+            <!-- Header Starts -->
+            <header>
+                <section class="navbar-top-section">
+                    <div class="container">
+                        <nav class="navbar-top">
+                            <div class="logo-wrapper">
+                                <a href="#">
+                                    <ul>
+                                        <li>
+                                            <img src="images/logo.svg" class="img-fluid" alt="Logo">
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <img src="images/logo-caption.png" class="img-fluid" alt="Logo caption">
+                                        </li>
+                                    </ul>
+                                </a>
+                            </div>
+                            <div class="language-meta">
+                                <select id="language-selection">
+                                    <option value="English">English</option>
+                                    <option value="Spanish">Spanish</option>
+                                    <option value="German">German</option>
+                                    <option value="Arabic">Arabic</option>
+                                </select>
+                                <button type="button" class="d-block d-md-none btn-mobile-menu-toggle not-active">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </section>
+
+                <section class="navbar-main-section">
+                    <div class="container">
+                        <nav class="navbar-main">
+                            <ul>
+                                <li><a href="#" class="active">Home</a></li>
+                                <li><a href="#">Tours</a></li>
+                                <li><a href="#">Destination</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+            </header>
+            <!-- Header Ends -->
+
+            <!-- Main Content Starts -->
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <section class="section-gap-top">
+                                <div class="note note-warning">
+                                    <h6>
+                                        <i class="fa-regular fa-circle-exclamation text-warning me-1"></i>
+                                        Important Information
+                                    </h6>
+                                    <ul class="small list-indicator-check list-space-8">
+                                        <li>
+                                            All guests must pass through airport-style security. During high season
+                                            and/or peak hours, the wait time at the security check may be up to 30 mins.
+                                        </li>
+                                        <li>
+                                            Children aged 5 and below don’t require a reservation to enter the monument.
+                                            However, all guests over 6 need one.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="section-gap-top">
+                                <h5 class="mb-3">Select a date</h5>
+                                <div class="date-selection-wrapper">
+                                    <div class="next-week-selection">
+                                        <button type="button" class="selection-item">
+                                            <span class="day"><strong>Thu</strong></span>
+                                            <span class="date">Nov 9</span>
+                                            <small class="price">€48.6</small>
+                                        </button>
+                                        <button type="button" class="selection-item">
+                                            <span class="day"><strong>Fri</strong></span>
+                                            <span class="date">Nov 10</span>
+                                            <small class="price">€48.6</small>
+                                        </button>
+                                        <button type="button" class="selection-item active">
+                                            <span class="day"><strong>Sat</strong></span>
+                                            <span class="date">Nov 11</span>
+                                            <small class="price">€48.6</small>
+                                        </button>
+                                        <button type="button" class="selection-item">
+                                            <span class="day"><strong>Sun</strong></span>
+                                            <span class="date">Nov 12</span>
+                                            <small class="price">€48.6</small>
+                                        </button>
+                                        <button type="button" class="selection-item disabled">
+                                            <span class="day"><strong>Mon</strong></span>
+                                            <span class="date">Nov 13</span>
+                                            <small class="price">€48.6</small>
+                                        </button>
+                                        <button type="button" class="selection-item">
+                                            <span class="day"><strong>Tue</strong></span>
+                                            <span class="date">Nov 14</span>
+                                            <small class="price">€48.6</small>
+                                        </button>
+                                        <button type="button" class="selection-item">
+                                            <span class="day"><strong>Wed</strong></span>
+                                            <span class="date">Nov 15</span>
+                                            <small class="price">€48.6</small>
+                                        </button>
+                                        <button type="button"
+                                                class="selection-item more-dates"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#bookingDateSelectionModal">
+                                            <i class="far fa-calendar mb-1"></i>
+                                            <small>More </br> Dates</small>
+                                        </button>
+                                    </div>
+                                    <div class="more-day-selection">
+                                        <!-- More Day Selection Modal Starts -->
+                                        <div class="modal date-selection-modal fade"
+                                             id="bookingDateSelectionModal"
+                                             tabindex="-1"
+                                             aria-labelledby="bookingDateSelectionModalLabel"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                                <div class="modal-content">
+                                                    <button type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                            aria-label="Close">
+                                                    </button>
+                                                    <div class="p-0 modal-body">
+                                                        <input hidden
+                                                               id="calendar-input"
+                                                               type="text"
+                                                               placeholder="Choose date"
+                                                               readonly/>
+                                                        <div id="calendar-input-div"></div>
+                                                        <div id="calendar"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- More Day Selection Modal Ends -->
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="section-gap-top section-booking-preference">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-3">Select your preference</h5>
+                                    <div class="mb-3 navigation-buttons">
+                                        <button type="button" class="me-1 slide-prev">
+                                            <i class="far fa-chevron-left"></i>
+                                        </button>
+                                        <button type="button" class="slide-next">
+                                            <i class="far fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper swiper-preference">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="preference-card">
+                                                <h6>English Guided Tour</h6>
+                                                <div class="my-3">
+                                                    <small>from</small>
+                                                    <h5>€65</h5>
+                                                </div>
+                                                <button type="button" class="w-100 btn btn-sm btn-outline-primary">
+                                                    Select
+                                                </button>
+                                                <hr>
+                                                <ul class="small list-indicator-check list-space-8">
+                                                    <li>
+                                                        Skip-the-line entrance to the Vatican Museums
+                                                    </li>
+                                                    <li>
+                                                        Entrance to the Sistine Chapel
+                                                    </li>
+                                                    <li>
+                                                        Expert English-speaking local guide
+                                                    </li>
+                                                    <li>
+                                                        Audio equipment to hear the guide clearly
+                                                    </li>
+                                                    <li>
+                                                        Group size of 25 or less
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="preference-card">
+                                                <h6>English Guided Tour</h6>
+                                                <div class="my-3">
+                                                    <small>from</small>
+                                                    <h5>€65</h5>
+                                                </div>
+                                                <button type="button" class="w-100 btn btn-sm btn-outline-primary">
+                                                    Select
+                                                </button>
+                                                <hr>
+                                                <ul class="small list-indicator-check list-space-8">
+                                                    <li>
+                                                        Skip-the-line entrance to the Vatican Museums
+                                                    </li>
+                                                    <li>
+                                                        Entrance to the Sistine Chapel
+                                                    </li>
+                                                    <li>
+                                                        Expert English-speaking local guide
+                                                    </li>
+                                                    <li>
+                                                        Audio equipment to hear the guide clearly
+                                                    </li>
+                                                    <li>
+                                                        Group size of 25 or less
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="preference-card">
+                                                <h6>English Guided Tour</h6>
+                                                <div class="my-3">
+                                                    <small>from</small>
+                                                    <h5>€65</h5>
+                                                </div>
+                                                <button type="button" class="w-100 btn btn-sm btn-outline-primary">
+                                                    Select
+                                                </button>
+                                                <hr>
+                                                <ul class="small list-indicator-check list-space-8">
+                                                    <li>
+                                                        Skip-the-line entrance to the Vatican Museums
+                                                    </li>
+                                                    <li>
+                                                        Entrance to the Sistine Chapel
+                                                    </li>
+                                                    <li>
+                                                        Expert English-speaking local guide
+                                                    </li>
+                                                    <li>
+                                                        Audio equipment to hear the guide clearly
+                                                    </li>
+                                                    <li>
+                                                        Group size of 25 or less
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="preference-card">
+                                                <h6>English Guided Tour</h6>
+                                                <div class="my-3">
+                                                    <small>from</small>
+                                                    <h5>€65</h5>
+                                                </div>
+                                                <button type="button" class="w-100 btn btn-sm btn-outline-primary">
+                                                    Select
+                                                </button>
+                                                <hr>
+                                                <ul class="small list-indicator-check list-space-8">
+                                                    <li>
+                                                        Skip-the-line entrance to the Vatican Museums
+                                                    </li>
+                                                    <li>
+                                                        Entrance to the Sistine Chapel
+                                                    </li>
+                                                    <li>
+                                                        Expert English-speaking local guide
+                                                    </li>
+                                                    <li>
+                                                        Audio equipment to hear the guide clearly
+                                                    </li>
+                                                    <li>
+                                                        Group size of 25 or less
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="preference-card">
+                                                <h6>English Guided Tour</h6>
+                                                <div class="my-3">
+                                                    <small>from</small>
+                                                    <h5>€65</h5>
+                                                </div>
+                                                <button type="button" class="w-100 btn btn-sm btn-outline-primary">
+                                                    Select
+                                                </button>
+                                                <hr>
+                                                <ul class="small list-indicator-check list-space-8">
+                                                    <li>
+                                                        Skip-the-line entrance to the Vatican Museums
+                                                    </li>
+                                                    <li>
+                                                        Entrance to the Sistine Chapel
+                                                    </li>
+                                                    <li>
+                                                        Expert English-speaking local guide
+                                                    </li>
+                                                    <li>
+                                                        Audio equipment to hear the guide clearly
+                                                    </li>
+                                                    <li>
+                                                        Group size of 25 or less
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="section-gap-top">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-md-6">
+                                        <label for="time-selection">
+                                            <h5 class="mb-2">Select your preferred time</h5>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <select class="w-100 mb-2 wide" id="time-selection">
+                                            <option value="8:30 AM">8:30 AM</option>
+                                            <option value="9:00 AM">9:00 AM</option>
+                                            <option value="9:30 AM">9:30 AM</option>
+                                            <option value="10:00 AM">10:00 AM</option>
+                                            <option value="10:30 AM">10:30 AM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr class="my-5">
+                            </section>
+                            <section class="section-gap-bottom">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-md-8">
+                                        <h6>English Guided Tour</h6>
+                                        <p class="mb-0">Sat, Jan 13, 08:30 AM</p>
+                                    </div>
+                                    <div class="col-md-4 text-end">
+                                        <button type="button" class="btn btn-lg btn-primary">
+                                            Next
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Main Content Ends -->
+
+            <!-- Footer Starts -->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-5">
+                            <div class="footer-logo-wrapper">
+                                <img src="images/logo-footer.png" class="img-fluid" alt="Footer logo">
+                            </div>
+                            <p>
+                                Headout is an authorized and trusted partner of the venue, offering curated experiences
+                                to
+                                enjoy this attraction. This is not the venue's website.
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-5 offset-md-1">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h5 class="footer-menu-title">Get Help</h5>
+                                    <ul class="footer-nav-menu">
+                                        <li><a href="#">Chat with Us</a></li>
+                                        <li><a href="#">Call Us</a></li>
+                                        <li><a href="#">Email Us</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="footer-menu-title">Legal</h5>
+                                    <ul class="footer-nav-menu">
+                                        <li><a href="#">Terms & Conditions</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Company Details</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="footer-divider">
+                    <div class="copyright-wrapper">
+                        <p class="mb-0">
+                            © 2023 Headout
+                        </p>
+                        <ul class="d-flex align-items-center mb-0 list-unstyled">
+                            <li class="me-3"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li class="me-3"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer Ends -->
+        </div>
+
+        <!-- Scripts -->
+        <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="vendors/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="vendors/swiper/swiper-bundle.min.js"></script>
+        <script src="vendors/vanilla-calendar/vanilla-calendar.min.js"></script>
+        <script src="js/booking.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
