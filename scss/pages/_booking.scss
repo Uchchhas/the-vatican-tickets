@@ -326,6 +326,7 @@
 }
 
 .selected-service-information {
+    margin-bottom: 20px;
     border-radius: $border-radius;
     border: 1px solid var(--color-border);
 
@@ -344,5 +345,81 @@
     @media (min-width: 768px) {
         position: sticky;
         top: calc($header-main-height + 20px);
+    }
+}
+
+.payment-options-wrapper {
+    display: flex;
+
+    .single-option {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .btn-check {
+            + .btn {
+                width: 80px;
+                height: 80px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0.375rem;
+                border: 1px solid var(--color-border);
+
+                &:before {
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    border-radius: 50%;
+                    border: 1px solid var(--color-border-light);
+                    background-color: var(--bs-white);
+                    transition: var(--transition);
+                }
+
+                &:after {
+                    content: '\f00c';
+                    position: absolute;
+                    top: 9px;
+                    right: 9px;
+                    font-size: 10px;
+                    @include font-awesome-font-mixin;
+                    color: var(--bs-white);
+                    font-weight: 900;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: rotate(90deg);
+                    transition: var(--transition);
+                }
+            }
+
+            &:checked {
+                + .btn {
+                    color: var(--color-primary);
+                    border-color: var(--color-primary);
+                    background-color: var(--color-primary-lighter);
+
+                    &:before {
+                        border-color: var(--color-primary);
+                        background-color: var(--color-primary);
+                    }
+
+                    &:after {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: rotate(0);
+                    }
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
     }
 }

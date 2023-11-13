@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         wizardStepNextButtons = document.querySelectorAll('.wizard-step .btn-next'),
         wizardStepLoader = document.querySelector('.wizard-step-loader');
 
-    let currentStep = 3;
+    let currentStep = 2;
     let activeStep = null;
 
     wizardStepButtons.forEach(item => {
@@ -128,4 +128,27 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         swiperPreferenceSlider?.slideNext();
     });
+
+    /* -- Add Service To Card -- */
+    const counterButtons = document.querySelectorAll('.count-button-wrapper');
+
+    counterButtons.forEach(btn => {
+        const incrementButton = btn.querySelector('button.btn-increment'),
+            decrementButton = btn.querySelector('button.btn-decrement'),
+            counterInput = btn.querySelector('input');
+
+        let count = counterInput.value;
+
+        incrementButton.addEventListener('click', () => {
+            count++;
+            counterInput.value = count;
+        });
+
+        decrementButton.addEventListener('click', () => {
+            if (count > 0) {
+                count--;
+                counterInput.value = count;
+            }
+        });
+    })
 });
