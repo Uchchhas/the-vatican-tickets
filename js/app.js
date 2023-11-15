@@ -135,6 +135,58 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+/* -- Swiper Initialization -- */
+const swiperTestimonial = new Swiper('.swiper-testimonial', {
+        // Optional parameters
+        loop: true,
+        spaceBetween: 30,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    }),
+    testimonialSwiperPrevButton = document.querySelector('.testimonial-swiper-prev'),
+    testimonialSwiperNextButton = document.querySelector('.testimonial-swiper-next');
+
+testimonialSwiperPrevButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    swiperTestimonial?.slidePrev();
+});
+
+testimonialSwiperNextButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    swiperTestimonial?.slideNext();
+});
+
+/* -- Counter Initialization -- */
+const counterUp = window.counterUp.default
+
+const callback = entries => {
+    entries.forEach(entry => {
+        const el = entry.target
+        if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+            counterUp(el, {
+                duration: 2000,
+                delay: 10
+            })
+            el.classList.add('is-visible')
+        }
+    });
+}
+
+const IO = new IntersectionObserver(callback, {threshold: 1});
+const counterElements = document.querySelectorAll('.counter');
+counterElements.forEach(el => {
+    IO.observe(el)
+});
+
+
 // JQuery Code Starts
 $(document).ready(function () {
     $('select').niceSelect();

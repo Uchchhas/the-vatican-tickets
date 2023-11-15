@@ -11,6 +11,8 @@
 @import "../vendors/fontawesome/scss/regular";
 @import "../vendors/fontawesome/scss/solid";
 @import "../vendors/fontawesome/scss/brands";
+@import "../vendors/fontawesome/scss/duotone";
+@import "../vendors/fontawesome/scss/sharp-solid";
 
 //@import "fonts";
 @import "accordion";
@@ -27,5 +29,6 @@
 @import "layouts/footer";
 
 // Pages
+@import "pages/about";
 @import "pages/home";
 @import "pages/booking";

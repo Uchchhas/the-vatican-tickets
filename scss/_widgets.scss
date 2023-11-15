@@ -1,3 +1,12 @@
+/* -- Section Title -- */
+.section-title {
+    .subtitle {
+        display: inline-block;
+        margin-bottom: 5px;
+        color: var(--color-secondary);
+    }
+}
+
 /* -- Rating Star Widget -- */
 .ratings-wrapper {
     display: inline-flex;
