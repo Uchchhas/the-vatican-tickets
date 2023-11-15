@@ -154,18 +154,18 @@ const swiperTestimonial = new Swiper('.swiper-testimonial', {
     testimonialSwiperPrevButton = document.querySelector('.testimonial-swiper-prev'),
     testimonialSwiperNextButton = document.querySelector('.testimonial-swiper-next');
 
-testimonialSwiperPrevButton.addEventListener('click', (e) => {
+testimonialSwiperPrevButton?.addEventListener('click', (e) => {
     e.preventDefault();
     swiperTestimonial?.slidePrev();
 });
 
-testimonialSwiperNextButton.addEventListener('click', (e) => {
+testimonialSwiperNextButton?.addEventListener('click', (e) => {
     e.preventDefault();
     swiperTestimonial?.slideNext();
 });
 
 /* -- Counter Initialization -- */
-const counterUp = window.counterUp.default
+const counterUp = window.counterUp?.default
 
 const callback = entries => {
     entries.forEach(entry => {
